@@ -3,11 +3,42 @@ import { Link } from "react-router-dom";
 import Logo from '../assets/images/Logo.png';
 import iconUser from '../assets/images/icons/User.png';
 import iconEye from '../assets/images/icons/Eye.png';
+import Axios from "axios";
 
 function LoginForm () {
     const [shown, setShown] = useState(false);
+    const [user, setUser] = useState('');
+    const [password, setPassword] = useState('');
+    const [loginSucess, setLoginSucess] = useState(false);
 
     const switchShown = () => setShown(!shown);
+
+    const login = async(e) => {
+        e.preventDefault();
+
+        try {
+            await Axios.get(`http://localhost:8080/users/`, {
+                params: {
+                    user: user, 
+                    password: password
+                }
+            }).then(
+                response => {
+
+                    if(response.data.status === 'Failed'){
+                        alert(response.data.object.code + ' - ' + response.data.object.exception);
+                        setUser('');
+                        setPassword('');
+                    }else {
+                        setLoginSucess(true);
+                    }
+                }
+            ).catch(e => console.log(e));
+
+        } catch (error) {
+            console.log(error);
+        }
+    }
 
     return (
         <>
@@ -15,17 +46,32 @@ function LoginForm () {
                 <img src={Logo} alt="Logo" className="image-logo"/>
 
                 <label className="label-usuario">Usuario</label>
-                <input type="text" name="usuario" id="usuario" className="input-usuario" />
+                <input 
+                    type="number" 
+                    name="user" 
+                    id="user" 
+                    className="input-usuario" 
+                    onChange={e => setUser(e.target.value)}
+                    value = {user}
+                />
                 <img src={iconUser} className="icon-usuario" alt="iconUsuario"/>
                 <label className="label-password">Contraseña</label>
-                <input type={shown ? 'text' : 'password'} name="contrasena" id="contrasena" className="input-password" />
+                <input 
+                    type={shown ? 'text' : 'password'} 
+                    name="password" 
+                    id="password" 
+                    className="input-password" 
+                    onChange={e => setPassword(e.target.value)}
+                    value = {password}
+                    autoComplete="on"
+                />
                 <img src={iconEye} className="icon-password" alt="iconPassword" onClick={switchShown}/>
-
-                <button className="button-iniciar">Iniciar</button>
+                
+                <Link to="/dashboard" className="button-iniciar">Iniciar</Link>
             </form>
 
             <Link className="hipervinculo">¿Has olvidado tu contraseña?</Link>
-            <Link className="hipervinculo crearCuenta" to="/">Crear una cuenta</Link>
+            <Link className="hipervinculo crearCuenta" to="/registrarse">Crear una cuenta</Link>
         </>
     )
 }
