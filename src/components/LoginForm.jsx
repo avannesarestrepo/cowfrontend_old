@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { createBrowserHistory } from 'history';
 import Logo from '../assets/images/Logo.png';
 import iconUser from '../assets/images/icons/User.png';
 import iconEye from '../assets/images/icons/Eye.png';
@@ -9,7 +10,7 @@ function LoginForm () {
     const [shown, setShown] = useState(false);
     const [user, setUser] = useState('');
     const [password, setPassword] = useState('');
-    const [loginSucess, setLoginSucess] = useState(false);
+    const broswerHistory = createBrowserHistory();
 
     const switchShown = () => setShown(!shown);
 
@@ -30,7 +31,8 @@ function LoginForm () {
                         setUser('');
                         setPassword('');
                     }else {
-                        setLoginSucess(true);
+                        broswerHistory.push("/dashboard");
+                        window.location.reload(true);
                     }
                 }
             ).catch(e => console.log(e));
@@ -67,11 +69,10 @@ function LoginForm () {
                 />
                 <img src={iconEye} className="icon-password" alt="iconPassword" onClick={switchShown}/>
                 
-                <Link to="/dashboard" className="button-iniciar">Iniciar</Link>
+                <button className="button-iniciar" onClick={e => login(e)}>Iniciar</button>
             </form>
 
-            <Link className="hipervinculo">¿Has olvidado tu contraseña?</Link>
-            <Link className="hipervinculo crearCuenta" to="/registrarse">Crear una cuenta</Link>
+            <Link className="hipervinculo crearCuenta" to="/register">Crear una cuenta</Link>
         </>
     )
 }

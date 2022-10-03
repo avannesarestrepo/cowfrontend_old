@@ -1,183 +1,183 @@
 body {
-    margin: 0;
-    box-sizing: border-box;
+    margin: 0 !important;
+    box-sizing: border-box !important;
 }
 
 label, input, select {
-    font-family: 'Inria Sans';
-    font-style: normal;
-    font-weight: 300;
-    font-size: 24px;
-    line-height: 29px;
-    margin: 5px;
+    font-family: 'Inria Sans' !important;
+    font-style: normal !important;
+    font-weight: 300 !important;
+    font-size: 24px !important;
+    line-height: 29px !important;
+    margin: 5px !important;
 }
 
 input {
-    background: #FFFFFF;
-    border: 2px solid #6AA6FF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-    height: 30px;
-    width: 500px;
+    background: #FFFFFF !important;
+    border: 2px solid #6AA6FF !important;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+    border-radius: 5px !important;
+    height: 30px !important;
+    width: 500px !important;
 }
 
 select {
-    background: #FFFFFF;
-    border: 2px solid #6AA6FF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 5px;
-    height: 30px;
-    width: 60px;
+    background: #FFFFFF !important;
+    border: 2px solid #6AA6FF !important;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+    border-radius: 5px !important;
+    height: 30px !important;
+    width: 60px !important;
 }
 
 .numberDocument {
-    width: 430px;
+    width: 430px !important;
 }
 
 @media screen and (min-width:600px) {
     .container-register {
-        display: flex;
-        margin-top: 70px;
-        margin-left: 90px;
-        margin-right: 90px;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 40px;
-        height: 600px;
+        display: flex !important;
+        margin-top: 70px !important;
+        margin-left: 90px !important;
+        margin-right: 90px !important;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+        border-radius: 40px !important;
+        height: 600px !important;
     }  
 
     .image-logo-register {
-        position: absolute;
-        width: 292px;
-        height: 100px;
-        left: 250px;
-        top: 130px;
+        position: absolute !important;
+        width: 292px !important;
+        height: 100px !important;
+        left: 250px !important;
+        top: 130px !important;
     }
     
     .image-register {
-        position: absolute;
-        width: 500px;
-        top: 50px;
-        left: 450px;
+        position: absolute !important;
+        width: 500px !important;
+        top: 50px !important;
+        left: 450px !important;
     }
 
     .form-class {
-        position: absolute;
-        top: 240px;
-        left: 180px;
+        position: absolute !important;
+        top: 240px !important;
+        left: 180px !important;
     }
 
     .icon-password-register {
-        position: absolute;
-        width: 32px;
-        height: 32px;
-        left: 475px;
-        top: 260px;
+        position: absolute !important;
+        width: 32px !important;
+        height: 32px !important;
+        left: 470px !important;
+        top: 260px !important;
     }  
 
     .button-register {
-        position: absolute;
-        width: 500px;
-        height: 45px;
-        left: 190px;
-        top: 570px;
+        position: absolute !important;
+        width: 500px !important;
+        height: 45px !important;
+        left: 190px !important;
+        top: 570px !important;
 
-        background: #2D049A;
-        border: 4px solid #2D049A;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 5px;
+        background: #2D049A !important;
+        border: 4px solid #2D049A !important;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+        border-radius: 5px !important;
 
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 800;
-        font-size: 28px;
-        line-height: 34px;
+        font-family: 'Inter' !important;
+        font-style: normal !important;
+        font-weight: 800 !important;
+        font-size: 28px !important;
+        line-height: 34px !important;
 
-        color: #FFFFFF;
+        color: #FFFFFF !important;
     }
     
     .hipervinculo-inicio {
-        position: absolute;
-        width: 293px;
-        height: 24px;
-        left: 380px;
-        top: 630px;
+        position: absolute !important;
+        width: 293px !important;
+        height: 24px !important;
+        left: 380px !important;
+        top: 630px !important;
 
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 800;
-        font-size: 20px;
-        line-height: 24px;
+        font-family: 'Inter' !important;
+        font-style: normal !important;
+        font-weight: 800 !important;
+        font-size: 20px !important;
+        line-height: 24px !important;
 
-        color: #2D049A;
+        color: #2D049A !important;
     }
 }
 
 @media screen and (max-width:1560px) {
     .container-register {
-        display: flex;
-        margin-top: 70px;
-        margin-left: 90px;
-        margin-right: 90px;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 40px;
-        height: 500px;
+        display: flex !important;
+        margin-top: 70px !important;
+        margin-left: 90px !important;
+        margin-right: 90px !important;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), inset 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+        border-radius: 40px !important;
+        height: 500px !important;
     }
 
     .image-logo-register {
-        position: absolute;
-        width: 292px;
-        height: 100px;
-        left: 250px;
-        top: 80px;
+        position: absolute !important;
+        width: 292px !important;
+        height: 100px !important;
+        left: 250px !important;
+        top: 80px !important;
     }
 
     .image-register {
-        position: absolute;
-        width: 400px;
-        top: 50px;
-        left: 360px;
+        position: absolute !important;
+        width: 400px !important;
+        top: 50px !important;
+        left: 360px !important;
     }
 
     .form-class {
-        position: absolute;
-        top: 180px;
-        left: 150px;
+        position: absolute !important;
+        top: 180px !important;
+        left: 150px !important;
     }
     
     .button-register {
-        position: absolute;
-        width: 500px;
-        height: 45px;
-        left: 160px;
-        top: 500px;
+        position: absolute !important;
+        width: 500px !important;
+        height: 45px !important;
+        left: 160px !important;
+        top: 500px !important;
 
-        background: #2D049A;
-        border: 4px solid #2D049A;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 5px;
+        background: #2D049A !important;
+        border: 4px solid #2D049A !important;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25) !important;
+        border-radius: 5px !important;
 
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 800;
-        font-size: 28px;
-        line-height: 34px;
+        font-family: 'Inter' !important;
+        font-style: normal !important;
+        font-weight: 800 !important;
+        font-size: 28px !important;
+        line-height: 34px !important;
 
-        color: #FFFFFF;
+        color: #FFFFFF !important;
     }
 
     .hipervinculo-inicio {
-        position: absolute;
-        width: 293px;
-        height: 24px;
-        left: 350px;
-        top: 575px;
+        position: absolute !important;
+        width: 293px !important;
+        height: 24px !important;
+        left: 350px !important;
+        top: 575px !important;
 
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 800;
-        font-size: 20px;
-        line-height: 24px;
+        font-family: 'Inter' !important;
+        font-style: normal !important;
+        font-weight: 800 !important;
+        font-size: 20px !important;
+        line-height: 24px !important;
 
-        color: #2D049A;
+        color: #2D049A !important;
     }
 }
